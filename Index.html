@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TKU & NU Joint Bilateral Workshop 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Dynamic Gradient Background */
+        .bg-hero {
+            background: linear-gradient(-45deg, #1e3a8a, #2563eb, #14532d, #16a34a);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating Particles Effect */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: float 8s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) translateX(-50px) scale(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-20vh) translateX(50px) scale(1.5); opacity: 0; }
+        }
+
+        .timeline-dot {
+            left: -5px;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tku: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 900: '#1e3a8a' }, // Blue for TKU Water Resources
+                        nu: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 900: '#14532d' }    // Green for NU Agriculture/Environment
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-4">
+                    <!-- TKU Logo -->
+                    <img src="TKU-logo.jpg" alt="TKU Logo" class="w-10 h-10 rounded-full shadow-md bg-white object-contain p-0.5">
+                    <i data-lucide="arrow-left-right" class="w-5 h-5 text-gray-400"></i>
+                    <!-- NU Logo -->
+                    <img src="NU logo.jpg" alt="NU Logo" class="w-10 h-10 rounded-full shadow-md bg-white object-contain p-0.5">
+                    <span class="hidden md:block font-semibold text-gray-800 ml-4 border-l border-gray-300 pl-4">Joint Bilateral Workshop</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-sm font-medium text-gray-600 hover:text-tku-600 transition">About</a>
+                    <a href="#speakers" class="text-sm font-medium text-gray-600 hover:text-tku-600 transition">Speakers</a>
+                    <a href="#schedule" class="text-sm font-medium text-gray-600 hover:text-tku-600 transition">Schedule</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-hero relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center min-h-[80vh]">
+        <!-- Dynamic Particles -->
+        <div class="particles" id="particles"></div>
+        <!-- Decorative Overlay -->
+        <div class="absolute inset-0 bg-black/20 z-[2]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-4 py-2 mb-8 border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                <span class="flex h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
+                <span class="text-sm font-medium text-white tracking-wide">Academic Exchange 2026</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
+                Sustainable Water Resources & <br class="hidden lg:block"/> Environmental Engineering
+            </h1>
+            <p class="mt-4 text-xl text-gray-100 max-w-3xl mx-auto mb-10 leading-relaxed font-light drop-shadow-md">
+                A joint bilateral workshop fostering collaborative research between Naresuan University and Tamkang University.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <div class="flex items-center text-white bg-white/10 px-6 py-3 rounded-lg backdrop-blur-md border border-white/10 shadow-xl hover:bg-white/20 transition duration-300">
+                    <i data-lucide="calendar" class="w-5 h-5 mr-3 text-blue-200"></i>
+                    <span class="font-medium tracking-wide">March 26, 2026</span>
+                </div>
+                <div class="flex items-center text-white bg-white/10 px-6 py-3 rounded-lg backdrop-blur-md border border-white/10 shadow-xl hover:bg-white/20 transition duration-300">
+                    <i data-lucide="clock" class="w-5 h-5 mr-3 text-blue-200"></i>
+                    <span class="font-medium tracking-wide">09:00 AM - 04:30 PM</span>
+                </div>
+                <div class="flex items-center text-white bg-white/10 px-6 py-3 rounded-lg backdrop-blur-md border border-white/10 shadow-xl hover:bg-white/20 transition duration-300">
+                    <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-blue-200"></i>
+                    <span class="font-medium tracking-wide">Tamkang University</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Fostering International Academic Excellence</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        The <strong>Department of Water Resources and Environmental Engineering (TKU)</strong> is proud to host the visiting delegation from the <strong>Faculty of Agriculture, Natural Resources and Environment at Naresuan University (NU)</strong>.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Hosted by Prof. Chi-Wang Li and co-led by the visiting delegation head, Prof. Pongsak Lek Noophan, this half-day workshop serves as a premier platform for faculty and post-graduate students to exchange innovative research ideas, focusing on the intersection of water resource management, agricultural sustainability, and environmental resilience.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-tku-50 p-6 rounded-xl border border-tku-100">
+                            <h3 class="font-bold text-tku-900 text-lg mb-2">Host Institution</h3>
+                            <p class="text-sm text-tku-600">College of Engineering, Tamkang University (TKU)</p>
+                        </div>
+                        <div class="bg-nu-50 p-6 rounded-xl border border-nu-100">
+                            <h3 class="font-bold text-nu-900 text-lg mb-2">Visiting Institution</h3>
+                            <p class="text-sm text-nu-600">Faculty of Agriculture & Environment, Naresuan University (NU)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop" alt="Students in discussion" class="rounded-2xl shadow-2xl object-cover h-[500px] w-full">
+                    <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-xl hidden md:block border border-gray-100">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-tku-100 p-3 rounded-full text-tku-600">
+                                <i data-lucide="users" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-medium">Participants</p>
+                                <p class="text-2xl font-bold text-gray-900">Faculty & Scholars</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Host & Speakers Section -->
+    <section id="speakers" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Distinguished Speakers</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Presenting cutting-edge research from both universities, featuring insights from faculty leaders and promising post-graduate scholars.</p>
+            </div>
+
+            <!-- Hosts Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                <!-- TKU Host Card -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transform hover:-translate-y-1 transition duration-300">
+                    <div class="p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                        <img src="chi-wang1 (1).jpg" alt="Prof. Chi-Wang Li" class="w-28 h-28 rounded-full object-cover shadow-md border-4 border-tku-50 shrink-0">
+                        <div class="text-center sm:text-left">
+                            <span class="text-xs font-bold tracking-wider text-tku-600 uppercase mb-2 block">Workshop Host (TKU)</span>
+                            <h3 class="text-xl font-bold text-gray-900">Prof. Chi-Wang Li</h3>
+                            <p class="text-gray-600 mt-1 mb-3 text-sm">Department of Water Resources and Environmental Engineering, TKU</p>
+                            <p class="text-xs text-gray-500 italic">"Welcoming our esteemed colleagues to foster global solutions for environmental challenges."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NU Host Card -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transform hover:-translate-y-1 transition duration-300">
+                    <div class="p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                        <img src="Pongsak.jpg" alt="Prof. Pongsak Lek Noophan" class="w-28 h-28 rounded-full object-cover shadow-md border-4 border-nu-50 shrink-0">
+                        <div class="text-center sm:text-left">
+                            <span class="text-xs font-bold tracking-wider text-nu-600 uppercase mb-2 block">Delegation Leader (NU)</span>
+                            <h3 class="text-xl font-bold text-gray-900">Prof. Pongsak Lek Noophan</h3>
+                            <p class="text-gray-600 mt-1 mb-3 text-sm">Faculty of Agriculture, Natural Resources and Environment, NU</p>
+                            <p class="text-xs text-gray-500 italic">"Delighted to exchange innovative research and strengthen our bilateral academic partnership."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faculty Speakers Grid -->
+            <h3 class="text-2xl font-bold text-gray-800 mb-8 border-b pb-4">Faculty Presentations</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <!-- TKU Prof 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-tku-100 text-tku-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">T</div>
+                    <span class="text-xs font-semibold text-tku-600 bg-tku-50 px-2 py-1 rounded">TKU Faculty</span>
+                    <h4 class="text-lg font-bold text-gray-900 mt-3">Assoc. Prof. Dr. Hsiao-Chung Tsai</h4>
+                    <p class="text-sm font-medium text-gray-800 mt-2 line-clamp-2" title="AI and Typhoon Forecasting: Recent Research">"AI and Typhoon Forecasting: Recent Research"</p>
+                </div>
+                <!-- TKU Prof 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-tku-100 text-tku-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">V</div>
+                    <span class="text-xs font-semibold text-tku-600 bg-tku-50 px-2 py-1 rounded">TKU Faculty</span>
+                    <h4 class="text-lg font-bold text-gray-900 mt-3">Asst. Prof. Dr. Ya Vinh</h4>
+                    <p class="text-sm font-medium text-gray-800 mt-2 line-clamp-2" title="Innovation electrochemical processes for wastewater treatment and resources recovery">"Innovation electrochemical processes for wastewater treatment and resources recovery"</p>
+                </div>
+                <!-- NU Prof 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-nu-100 text-nu-600 rounded-full flex items-center justify-center mb-4"><i data-lucide="user" class="w-8 h-8"></i></div>
+                    <span class="text-xs font-semibold text-nu-600 bg-nu-50 px-2 py-1 rounded">NU Faculty</span>
+                    <h4 class="text-lg font-bold text-gray-900 mt-3">Assoc. Prof. Dr. Nattapon Mahavik</h4>
+                    <p class="text-sm font-medium text-gray-800 mt-2 line-clamp-2" title="Geospatial Analysis of Severe Storms in Thailand During the Pre-Monsoon and Monsoon Seasons Using Integrated Radar and Atmospheric Observations">"Geospatial Analysis of Severe Storms in Thailand During the Pre-Monsoon and Monsoon Seasons Using Integrated Radar and Atmospheric Observations"</p>
+                </div>
+                <!-- NU Prof 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-nu-100 text-nu-600 rounded-full flex items-center justify-center mb-4"><i data-lucide="user" class="w-8 h-8"></i></div>
+                    <span class="text-xs font-semibold text-nu-600 bg-nu-50 px-2 py-1 rounded">NU Faculty</span>
+                    <h4 class="text-lg font-bold text-gray-900 mt-3">Dr. Kesinee Iamsaard</h4>
+                    <p class="text-sm font-medium text-gray-800 mt-2 line-clamp-2" title="Researches on Heavy Metal Contamination in Soil and Agricultural products">"Researches on Heavy Metal Contamination in Soil and Agricultural products"</p>
+                </div>
+            </div>
+
+            <!-- Student Speakers Grid -->
+            <h3 class="text-2xl font-bold text-gray-800 mb-8 border-b pb-4">Post-Graduate Scholar Presentations</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- TKU Student -->
+                <div class="bg-white p-5 rounded-xl border border-tku-200 shadow-sm border-l-4 border-l-tku-500 hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-gray-900">Miss. Fang-Yi Lin</h4>
+                        <span class="text-[10px] font-bold uppercase text-tku-600 bg-tku-50 px-2 py-1 rounded">TKU</span>
+                    </div>
+                    <p class="text-sm text-gray-600 italic">"Quantifying Situation-Dependent Uncertainty in Tropical Cyclone Track Forecasts with a Recurrent Neural Network Approach"</p>
+                </div>
+                <!-- NU Student 1 -->
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm border-l-4 border-l-nu-500 hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-gray-900">Miss Apichaya Kangerd</h4>
+                        <span class="text-[10px] font-bold uppercase text-nu-600 bg-nu-50 px-2 py-1 rounded">NU</span>
+                    </div>
+                    <p class="text-sm text-gray-600 italic">"A GIS-Based Spatial Bias Adjustment Method for Radar-Derived Rainfall Estimates During Storm Dissipation in Central Thailand"</p>
+                </div>
+                <!-- NU Student 2 -->
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm border-l-4 border-l-nu-500 hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-gray-900">Mr. Jamorn Kunwilai</h4>
+                        <span class="text-[10px] font-bold uppercase text-nu-600 bg-nu-50 px-2 py-1 rounded">NU</span>
+                    </div>
+                    <p class="text-sm text-gray-600 italic">"Physical Analysis of Hail-Producing Summer Storms in Northern Thailand Using Meteorological Weather Radar"</p>
+                </div>
+                <!-- NU Student 3 -->
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm border-l-4 border-l-nu-500 hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-gray-900">Mr. Songwut Sarnjanthuk</h4>
+                        <span class="text-[10px] font-bold uppercase text-nu-600 bg-nu-50 px-2 py-1 rounded">NU</span>
+                    </div>
+                    <p class="text-sm text-gray-600 italic">"Source Apportionment-Linked Health Risk Assessment of PM2.5 in a Mixed Land-Use Area of Saraburi, Thailand: A Multi-Model Approach (PMF, CPF, and HYSPLIT)"</p>
+                </div>
+                <!-- NU Student 4 -->
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm border-l-4 border-l-nu-500 hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-gray-900">Mr. Worakan Pongsukpin</h4>
+                        <span class="text-[10px] font-bold uppercase text-nu-600 bg-nu-50 px-2 py-1 rounded">NU</span>
+                    </div>
+                    <p class="text-sm text-gray-600 italic">"Abundance and Characteristics of Microplastics in a Municipal Solid Waste Disposal Area"</p>
+                </div>
+                <!-- NU Student 5 -->
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm border-l-4 border-l-nu-500 hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-gray-900">Miss Dueanphen Moolmee</h4>
+                        <span class="text-[10px] font-bold uppercase text-nu-600 bg-nu-50 px-2 py-1 rounded">NU</span>
+                    </div>
+                    <p class="text-sm text-gray-600 italic">"Models of Infectious Waste Management for Bedridden Patients in Northeastern Communities of Thailand"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Workshop Schedule</h2>
+                <p class="text-gray-600 mb-6">Full Day Program: 09:00 AM – 04:30 PM</p>
+            </div>
+
+            <div class="relative border-l-2 border-gray-200 ml-4 md:ml-0 space-y-8">
+                
+                <!-- Registration -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="timeline-dot absolute top-1 w-3 h-3 bg-gray-300 rounded-full border-4 border-white group-hover:bg-tku-500 transition-colors"></div>
+                    <div class="flex flex-col md:flex-row md:items-baseline">
+                        <span class="text-tku-600 font-bold w-32 shrink-0">09:00 - 09:15</span>
+                        <div class="mt-2 md:mt-0">
+                            <h4 class="text-lg font-bold text-gray-900">Registration & Welcome Remarks</h4>
+                            <p class="text-gray-600 mt-1">Opening address by <strong>Prof. Chi-Wang Li</strong> & <strong>Prof. Pongsak Lek Noophan</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Session 1 -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="timeline-dot absolute top-1 w-3 h-3 bg-tku-400 rounded-full border-4 border-white group-hover:bg-tku-600 transition-colors"></div>
+                    <div class="flex flex-col md:flex-row md:items-baseline">
+                        <span class="text-tku-600 font-bold w-32 shrink-0">09:15 - 09:23</span>
+                        <div class="mt-2 md:mt-0 bg-gray-50 p-4 rounded-lg w-full border border-gray-100">
+                            <span class="text-xs font-semibold text-tku-600 bg-tku-100 px-2 py-1 rounded inline-block mb-2">Faculty Presentation</span>
+                            <h4 class="text-md font-bold text-gray-900">AI and Typhoon Forecasting: Recent Research</h4>
+                            <p class="text-gray-600 mt-1 flex items-center"><i data-lucide="user" class="w-4 h-4 mr-2"></i> Prof. Hsiao-Chung Tsai (TKU)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Session 2 -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="timeline-dot absolute top-1 w-3 h-3 bg-nu-400 rounded-full border-4 border-white group-hover:bg-nu-600 transition-colors"></div>
+                    <div class="flex flex-col md:flex-row md:items-baseline">
+                        <span class="text-tku-600 font-bold w-32 shrink-0">09:23 - 09:38</span>
+                        <div class="mt-2 md:mt-0 bg-gray-50 p-4 rounded-lg w-full border border-gray-100">
+                            <span class="text-xs font-semibold text-nu-600 bg-nu-100 px-2 py-1 rounded inline-block mb-2">Faculty Presentation</span>
+                            <h4 class="text-md font-bold text-gray-900">Geospatial Analysis of Severe Storms in Thailand During the Pre-Monsoon and Monsoon Seasons Using Integrated Radar and Atmospheric Observations</h4>
+                            <p class="text-gray-600 mt-1 flex items-center"><i data-lucide="user" class="w-4 h-4 mr-2"></i> Assoc. Prof. Dr. Nattapon Mahavik (NU)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Session 3 -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="timeline-dot absolute top-1 w-3 h-3 bg-tku-400 rounded-full border-4 border-white group-hover:bg-tku-600 transition-colors"></div>
+                    <div class="flex flex-col md:flex-row md:items-baseline">
+                        <span class="text-tku-600 font-bold w-32 shrink-0">09:38 - 09:53</span>
+                        <div class="mt-2 md:mt-0 bg-gray-50 p-4 rounded-lg w-full border border-gray-100">
+                            <span class="text-xs font-semibold text-tku-600 bg-tku-100 px-2 py-1 rounded inline-block mb-2">Faculty Presentation</span>
+                            <h4 class="text-md font-bold text-gray-900">Innovation electrochemical processes for wastewater treatment and resources recovery</h4>
+                            <p class="text-gray-600 mt-1 flex items-center"><i data-lucide="user" class="w-4 h-4 mr-2"></i> Prof. Ya Vinh (TKU)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Session 4 -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="timeline-dot absolute top-1 w-3 h-3 bg-nu-400 rounded-full border-4 border-white group-hover:bg-nu-600 transition-colors"></div>
+                    <div class="flex flex-col md:flex-row md:items-baseline">
+                        <span class="text-tku-600 font-bold w-32 shrink-0">09:53 - 10:08</span>
+                        <div class="mt-2 md:mt-0 bg-gray-50 p-4 rounded-lg w-full border border-gray-100">
+                            <span class="text-xs font-semibold text-nu-600 bg-nu-100 px-2 py-1 rounded inline-block mb-2">Faculty Presentation</span>
+                            <h4 class="text-md font-bold text-gray-900">Researches on Heavy Metal Contamination in Soil and Agricultural products</h4>
+                            <p class="text-gray-600 mt-1 flex items-center"><i data-lucide="user" class="w-4 h-4 mr-2"></i> Dr. Kesinee Iamsaard (NU)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Break -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="timeline-dot absolute top-1 w-3 h-3 bg-amber-400 rounded-full border-4 border-white"></div>
+                    <div class="flex flex-col md:flex-row md:items-baseline">
+                        <span class="text-amber-600 font-bold w-32 shrink-0">10:08 - 10:23</span>
+                        <div class="mt-2 md:mt-0">
+                            <h4 class="text-lg font-bold text-gray-900 flex items-center"><i data-lucide="coffee" class="w-5 h-5 mr-2 text-amber-600"></i> Coffee Break & Group Photo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Sessions -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="timeline-dot absolute top-1 w-3 h-3 bg-gray-400 rounded-full border-4 border-white"></div>
+                    <div class="flex flex-col md:flex-row md:items-baseline">
+                        <span class="text-gray-600 font-bold w-32 shrink-0">10:23 - 11:47</span>
+                        <div class="mt-2 md:mt-0 w-full">
+                            <h4 class="text-lg font-bold text-gray-900 mb-4">Post-Graduate Research Exchange</h4>
+                            <div class="space-y-3">
+                                <!-- Student 1 -->
+                                <div class="flex items-start p-3 bg-tku-50/50 rounded-lg border border-tku-100">
+                                    <span class="text-sm font-semibold text-tku-600 w-16 shrink-0 mt-0.5">10:23</span>
+                                    <div>
+                                        <p class="text-sm font-bold text-gray-900">Quantifying Situation-Dependent Uncertainty in Tropical Cyclone Track Forecasts with a Recurrent Neural Network Approach</p>
+                                        <p class="text-xs text-gray-600 mt-1">Miss. Fang-Yi Lin (TKU)</p>
+                                    </div>
+                                </div>
+                                <!-- Student 2 -->
+                                <div class="flex items-start p-3 bg-nu-50/50 rounded-lg border border-nu-100">
+                                    <span class="text-sm font-semibold text-nu-600 w-16 shrink-0 mt-0.5">10:37</span>
+                                    <div>
+                                        <p class="text-sm font-bold text-gray-900">A GIS-Based Spatial Bias Adjustment Method for Radar-Derived Rainfall Estimates During Storm Dissipation in Central Thailand</p>
+                                        <p class="text-xs text-gray-600 mt-1">Miss Apichaya Kangerd (NU)</p>
+                                    </div>
+                                </div>
+                                <!-- Student 3 -->
+                                <div class="flex items-start p-3 bg-nu-50/50 rounded-lg border border-nu-100">
+                                    <span class="text-sm font-semibold text-nu-600 w-16 shrink-0 mt-0.5">10:51</span>
+                                    <div>
+                                        <p class="text-sm font-bold text-gray-900">Physical Analysis of Hail-Producing Summer Storms in Northern Thailand Using Meteorological Weather Radar</p>
+                                        <p class="text-xs text-gray-600 mt-1">Mr. Jamorn Kunwilai (NU)</p>
+                                    </div>
+                                </div>
+                                <!-- Student 4 -->
+                                <div class="flex items-start p-3 bg-nu-50/50 rounded-lg border border-nu-100">
+                                    <span class="text-sm font-semibold text-nu-600 w-16 shrink-0 mt-0.5">11:05</span>
+                                    <div>
+                                        <p class="text-sm font-bold text-gray-900">Source Apportionment-Linked Health Risk Assessment of PM2.5 in a Mixed Land-Use Area of Saraburi, Thailand: A Multi-Model Approach (PMF, CPF, and HYSPLIT)</p>
+                                        <p class="text-xs text-gray-600 mt-1">Mr. Songwut Sarnjanthuk (NU)</p>
+                                    </div>
+                                </div>
+                                <!-- Student 5 -->
+                                <div class="flex items-start p-3 bg-nu-50/50 rounded-lg border border-nu-100">
+                                    <span class="text-sm font-semibold text-nu-600 w-16 shrink-0 mt-0.5">11:19</span>
+                                    <div>
+                                        <p class="text-sm font-bold text-gray-900">Abundance and Characteristics of Microplastics in a Municipal Solid Waste Disposal Area</p>
+                                        <p class="text-xs text-gray-600 mt-1">Mr. Worakan Pongsukpin (NU)</p>
+                                    </div>
+                                </div>
+                                <!-- Student 6 -->
+                                <div class="flex items-start p-3 bg-nu-50/50 rounded-lg border border-nu-100">
+                                    <span class="text-sm font-semibold text-nu-600 w-16 shrink-0 mt-0.5">11:33</span>
+                                    <div>
+                                        <p class="text-sm font-bold text-gray-900">Models of Infectious Waste Management for Bedridden Patients in Northeastern Communities of Thailand</p>
+                                        <p class="text-xs text-gray-600 mt-1">Miss Dueanphen Moolmee (NU)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Closing -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="timeline-dot absolute top-1 w-3 h-3 bg-gray-300 rounded-full border-4 border-white group-hover:bg-tku-500 transition-colors"></div>
+                    <div class="flex flex-col md:flex-row md:items-baseline">
+                        <span class="text-tku-600 font-bold w-32 shrink-0">11:47 - 12:00</span>
+                        <div class="mt-2 md:mt-0">
+                            <h4 class="text-lg font-bold text-gray-900">Panel Discussion & Closing Remarks</h4>
+                            <p class="text-gray-600 mt-1">Open Q&A, conclusion by Prof. Chi-Wang Li, and souvenir exchange.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lunch -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="timeline-dot absolute top-1 w-3 h-3 bg-amber-400 rounded-full border-4 border-white"></div>
+                    <div class="flex flex-col md:flex-row md:items-baseline">
+                        <span class="text-amber-600 font-bold w-32 shrink-0">12:00 - 13:30</span>
+                        <div class="mt-2 md:mt-0">
+                            <h4 class="text-lg font-bold text-gray-900 flex items-center"><i data-lucide="utensils" class="w-5 h-5 mr-2 text-amber-600"></i> Lunch Break</h4>
+                            <p class="text-gray-600 mt-1">Networking lunch for all participants.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dean Meeting -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="timeline-dot absolute top-1 w-3 h-3 bg-tku-400 rounded-full border-4 border-white group-hover:bg-tku-600 transition-colors"></div>
+                    <div class="flex flex-col md:flex-row md:items-baseline">
+                        <span class="text-tku-600 font-bold w-32 shrink-0">14:00 - 14:30</span>
+                        <div class="mt-2 md:mt-0 bg-gray-50 p-4 rounded-lg w-full border border-gray-100">
+                            <span class="text-xs font-semibold text-tku-600 bg-tku-100 px-2 py-1 rounded inline-block mb-2">Leadership Meeting</span>
+                            <h4 class="text-md font-bold text-gray-900">Meeting with the Dean</h4>
+                            <p class="text-gray-600 mt-1 flex items-center"><i data-lucide="building" class="w-4 h-4 mr-2"></i> College of Engineering, TKU</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VP Meeting -->
+                <div class="relative pl-8 md:pl-10 group">
+                    <div class="timeline-dot absolute top-1 w-3 h-3 bg-tku-400 rounded-full border-4 border-white group-hover:bg-tku-600 transition-colors"></div>
+                    <div class="flex flex-col md:flex-row md:items-baseline">
+                        <span class="text-tku-600 font-bold w-32 shrink-0">16:00 - 16:30</span>
+                        <div class="mt-2 md:mt-0 bg-gray-50 p-4 rounded-lg w-full border border-gray-100">
+                            <span class="text-xs font-semibold text-tku-600 bg-tku-100 px-2 py-1 rounded inline-block mb-2">Leadership Meeting</span>
+                            <h4 class="text-md font-bold text-gray-900">Meeting with the Vice President</h4>
+                            <p class="text-gray-600 mt-1 flex items-center"><i data-lucide="building" class="w-4 h-4 mr-2"></i> Tamkang University</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4 flex items-center">
+                    <img src="TKU-logo.jpg" alt="TKU Logo" class="w-8 h-8 rounded-full bg-white object-contain p-0.5 mr-3">
+                    Tamkang University
+                </h4>
+                <p class="text-sm">Department of Water Resources and Environmental Engineering<br>College of Engineering<br>New Taipei City, Taiwan</p>
+            </div>
+            <div class="md:text-right">
+                <h4 class="text-white font-bold text-lg mb-4 flex items-center md:justify-end">
+                    <img src="NU logo.jpg" alt="NU Logo" class="w-8 h-8 rounded-full bg-white object-contain p-0.5 mr-3 md:order-last md:ml-3 md:mr-0">
+                    Naresuan University
+                </h4>
+                <p class="text-sm">Faculty of Agriculture, Natural Resources and Environment<br>Phitsanulok, Thailand</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-8 pt-8 border-t border-gray-800 text-sm text-center">
+            &copy; 2026 Joint Bilateral Workshop. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Create Particles
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 20;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            // Random properties
+            const size = Math.random() * 20 + 10; // 10px to 30px
+            const left = Math.random() * 100; // 0% to 100%
+            const duration = Math.random() * 10 + 5; // 5s to 15s
+            const delay = Math.random() * 10; // 0s to 10s
+
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${left}%`;
+            particle.style.animationDuration = `${duration}s`;
+            particle.style.animationDelay = `${delay}s`;
+
+            particlesContainer.appendChild(particle);
+        }
+    </script>
+</body>
+</html>
